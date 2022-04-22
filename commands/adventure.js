@@ -32,10 +32,10 @@ module.exports = {
         .setDescription("The reward of adventure island")
         .setRequired(true)
         .addChoices(
-          { name: "Gold", value: "gold" },
-          { name: "Card Pack", value: "card pack" },
-          { name: "Silver", value: "silver" },
-          { name: "Pirate Coin", value: "pirate coin" }
+          { name: "Gold", value: ":gold:966985332442664960" },
+          { name: "Card Pack", value: ":cardpack:966985332543356938" },
+          { name: "Silver", value: ":silver:966985332534960128" },
+          { name: "Pirate Coin", value: ":piratecoin:966985332530765875" }
         )
     ),
   async execute(interaction) {
@@ -43,7 +43,7 @@ module.exports = {
     const reward = interaction.options.getString("reward");
     await interaction.reply({
       allowedMentions: { roles: ["966659062064357436"] },
-      content: `<@&${"966659062064357436"}>, ${island} has ${reward} reward today!`,
+      content: `<@&${"966659062064357436"}>, ${island} Island has <${reward}> reward today!`,
     });
   },
 };
