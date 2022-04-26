@@ -1,4 +1,6 @@
+const { roleId } = require('../config.json');
 const { SlashCommandBuilder } = require("@discordjs/builders");
+
 
 const islands = [
   { name: "Asura", islandCode: "asura-island" },
@@ -86,8 +88,8 @@ module.exports = {
       }
     });
     await interaction.reply({
-      allowedMentions: { roles: ["966659062064357436"] },
-      content: `<@&${"966659062064357436"}>`,
+      allowedMentions: { roles: [roleId] },
+      content: `<@&${roleId}>`,
       embeds: [
         {
           type: "rich",
@@ -104,12 +106,12 @@ module.exports = {
               value: `${reward}`,
             },
             {
-              name: `Event Time`,
+              name: `Event Times`,
               value: `${time}`,
             },
             {
               name: `Island Info(Maxroll.gg)`,
-              value: `https://lost-ark.maxroll.gg/island/${selectedIslandCode}`,
+              value: `[${island} Island.](https://lost-ark.maxroll.gg/island/${selectedIslandCode})`,
             },
           ],
           thumbnail: {
