@@ -87,6 +87,14 @@ module.exports = {
         selectedRewardEmoji = r.emojiID;
       }
     });
+    //added ${island} - ${reward} at ${interaction.creadtedTimestamp}
+    var date = new Date(interaction.createdTimestamp);
+    var formattedDate = date.toLocaleDateString("en-GB");
+    var formattedTime = date.toLocaleTimeString("en-GB");
+    const logStr = `[${formattedDate} ${formattedTime}] \t ${interaction.user.username} created alert for island=[${island}], reward=[${reward}}]`;
+    console.log(logStr);
+    // TODO: write logs to a file (e.g: /logs/bot-$date-$time.log)
+    
     await interaction.reply({
       allowedMentions: { roles: [roleId] },
       content: `<@&${roleId}>`,
