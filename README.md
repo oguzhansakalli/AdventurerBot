@@ -8,7 +8,13 @@ Executing program
 You need to create your own config.json folder. It must be contain "your bot's token","guildId","clientId" and, you can also input mentionable "role's id" here.
 
 In terminal you need to start "deploy-command.js" first. For every change in commands folder.
+```
+node deploy-commands.js
+```
 After you deployed commands, you can start "main.js".
+```
+node main.js
+```
 Your bot is ready.
 Usage
 In your discord server you can use the bot with "/" commands.
